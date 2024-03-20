@@ -67,9 +67,10 @@ SELECT * FROM contatos WHERE grupo = 'trabalho';
 
 SELECT * FROM contatos WHERE favorito = 1;
 
-UPDATE contatos SET telefone = '111111111' WHERE id = 1;
+UPDATE contatos SET telefone = '1111111111' WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
-DELETE FROM contatos WHERE nome = 'Davi40';
+DELETE FROM contatos WHERE id BETWEEN 1 AND 5;
 
+ALTER TABLE contatos ADD COLUMN favorito BOOLEAN DEFAULT 0;
+UPDATE contatos SET favorito = 1 WHERE id IN (1, 2, 3);
 
-ALTER TABLE contatos ADD COLUMN favorito BOOLEAN;
