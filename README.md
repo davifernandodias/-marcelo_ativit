@@ -69,7 +69,7 @@ SELECT * FROM contatos WHERE favorito = 1;
 
 UPDATE contatos SET telefone = '111111111' WHERE id = 1;
 
-DELETE FROM contatos WHERE id = 1;
+DELETE FROM contatos WHERE nome = 'Davi40';
 
--- Adicionar a opção de favorito
+
 ALTER TABLE contatos ADD COLUMN favorito BOOLEAN;
